@@ -1,0 +1,12 @@
+{
+	"compileerOptions": {
+		"outDir": "./dist/",
+		"module": "es6",
+		"target": "es5",
+		"sourceMap": true,
+		"allowJs": true
+	},
+	"exclude": [
+		"node_modules"
+	]
+}

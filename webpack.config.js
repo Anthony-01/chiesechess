@@ -6,6 +6,28 @@ module.exports = {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	},
+	module: {
+		rules: [
+			{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+			        options: {
+			          presets: ['@babel/preset-env']
+			        }
+				}
+			},
+			{
+		        test: /\.tsx?$/,
+		        use: 'ts-loader',
+		        exclude: /node_modules/
+	        }
+		]
+	},
+	resolve: {
+    	extensions: [ '.tsx', '.ts', '.js' ]
+  	},
 	devtool: 'source-map',
 	watch: true,
 	watchOptions: {

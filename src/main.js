@@ -6,3 +6,5 @@ var chess = require('./ChessGame.js');
 
 chess.initMap();
 chess.init();
+
+document.getElementsByTagName("body")[0].addEventListener("click", chess.initEvent, false);
